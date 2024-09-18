@@ -1,0 +1,46 @@
+/* src/pages/Referral.css */
+.referral-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+  }
+  
+  .generate-link-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .generate-link-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .referral-link-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .referral-link-box p {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .referral-link-box a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .referral-link-box a:hover {
+    text-decoration: underline;
+  }
+  

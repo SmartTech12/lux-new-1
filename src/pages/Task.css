@@ -1,0 +1,89 @@
+/* Task.css */
+.body2 {
+  background: linear-gradient(180deg, #0D359D 0%, #010A20 50.34%);
+  min-height: 100vh;
+}
+
+.task-container {
+ 
+  
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+ 
+ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+p {
+  display: flex;
+  text-align: center;
+  color: #4e89c7;
+  font-weight: 100;
+  font-size: 20px;
+  justify-content: space-around;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #5f2dc1;
+  border-radius: 30px;
+  background: #6071be;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.task-list li:hover {
+  background: #29187a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li span {
+  flex: 1;
+  font-size: 1rem;
+  color: #555;
+}
+
+.task-list li button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-list li button:hover {
+  background-color: #0056b3;
+}
+
+.task-list li.completed {
+  border-color: #28a745;
+}
+
+.task-list li.completed span {
+  color: #28a745;
+}
+
+.task-list li.verifying {
+  border-color: #ffc107;
+}
+
+.task-list li.verifying span {
+  color: #ffc107;
+}
