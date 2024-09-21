@@ -7,7 +7,7 @@ function Task() {
     { id: 1, description: 'Join our Telegram Group', link: 'https://t.me/LXYRWA2', status: 'pending', timer: null },
     { id: 2, description: 'Join our X Community', link: 'https://x.com/LuxuryRWA?t=qAlhWAbiFsmTH-z-cdIVcA&s=09', status: 'pending', timer: null },
     { id: 3, description: 'Join our Telegram Channel', link: 'https://t.me/LXYRWA', status: 'pending', timer: null },
-    { id: 4, description: 'Join our Youtube community', link: 'https://youtube.com/@lxyrwa?si=qAdyYj654Fsbqf0s', status: 'pending', timer: null },
+    { id: 4, description: 'Subscribe our Youtube community', link: 'https://youtube.com/@lxyrwa?si=qAdyYj654Fsbqf0s', status: 'pending', timer: null },
   ], []);
 
   // Function to merge new tasks with the existing ones without resetting
