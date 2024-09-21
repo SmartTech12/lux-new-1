@@ -4,7 +4,7 @@ import coin from '../assets/icons/clock (1).png';
 import con from '../assets/icons/1726364941689.png'
 import './Mine.css';
 
-const MINE_DURATION = 1 * 60 * 1000; // 1 minute in milliseconds
+const MINE_DURATION = 9 * 60 * 60 * 1000; // 1 minute in milliseconds
 const CLAIM_AMOUNT = 18;
 
 const Mine = () => {
