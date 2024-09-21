@@ -1,7 +1,7 @@
 /* Task.css */
 .body2 {
   background: linear-gradient(180deg, #0D359D 0%, #010A20 50.34%);
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .task-container {
