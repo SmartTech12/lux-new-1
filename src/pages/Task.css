@@ -87,3 +87,8 @@ p {
 .task-list li.verifying span {
   color: #ffc107;
 }
+.task-details {
+  font-size: 0.9rem;
+  color: #666; /* Gray color to differentiate from the main task description */
+  margin-top: 5px;
+}
