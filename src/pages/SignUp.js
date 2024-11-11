@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
+import load from '../assets/icons/Diamond Neon Modern Phone Wallpaper_20240806_013134_0001.gif';
 import './Signup.css';
 
 function SignUp() {
@@ -38,7 +39,7 @@ function SignUp() {
   };
 
   if (loading) {
-    return <p>Loading...</p>; // Show a loading message while checking auth status
+    return <div className='load'><img src={load} alt='' /></div>; // Show a loading message while checking auth status
   }
 
   return (

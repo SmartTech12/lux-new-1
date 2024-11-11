@@ -1,19 +1,21 @@
 /* General Navbar Styling */
 nav {
-  position: fixed; /* Stick the navbar to the bottom or top */
-  bottom: 0; /* Change to 'top' if you want the navbar at the top */
+  position: fixed;
+  bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #2c3e50; /* Dark blue-gray background */
+  background-color: #34495e; /* Darker blue-gray background */
   padding: 10px 0;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  z-index: 1000; /* Ensure navbar is above content */
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  backdrop-filter: blur(8px); /* Adds a frosted glass effect */
 }
 
 /* Navbar List */
 nav ul {
   display: flex;
-  justify-content: space-around; /* Space icons evenly */
+  justify-content: space-around;
   align-items: center;
   list-style: none;
   margin: 0;
@@ -23,7 +25,7 @@ nav ul {
 /* Navbar Items */
 nav ul li {
   text-align: center;
-  flex-grow: 1; /* Each list item takes equal space */
+  flex-grow: 1;
 }
 
 /* Navbar Links */
@@ -33,29 +35,54 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #ecf0f1; /* Light color text */
+  color: #ecf0f1;
   font-size: 14px;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #f39c12; /* Change color on hover */
+  color: #f1c40f; /* Bright golden yellow on hover */
+  transform: translateY(-3px); /* Lift link slightly on hover */
 }
 
 /* Icon Styling */
 nav ul li a img {
-  width: 24px; /* Adjust icon size */
-  height: 24px;
-  margin-bottom: 5px; /* Space between icon and text */
-  transition: transform 0.3s ease;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 nav ul li a:hover img {
   transform: scale(1.2); /* Slight zoom on hover */
+  filter: drop-shadow(0 4px 4px rgba(241, 196, 15, 0.5)); /* Highlighted shadow */
 }
 
-/* Make sure the content has enough space for the navbar */
+/* Highlight active link */
+nav ul li a.active {
+  color: #f1c40f; /* Match hover color */
+}
+
+nav ul li a.active img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 4px 4px rgba(241, 196, 15, 0.5));
+}
+
+/* Responsive padding for content */
 body {
-  padding-bottom: 60px; /* Same as the height of your navbar */
+  padding-bottom: 70px; /* Space for navbar */
+  margin: 0;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 12px;
+  }
+  nav ul li a img {
+    width: 22px;
+    height: 22px;
+  }
 }

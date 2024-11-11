@@ -15,24 +15,14 @@ const Navbar = () => {
             Tap
           </Link>
         </li>
-        <li>
-          <Link to="/mine">
-            <img src={MineIcon} alt="Mine" />
-            Mine
-          </Link>
-        </li>
+     
         <li>
           <Link to="/task">
             <img src={TaskIcon} alt="Task" />
             Task
           </Link>
         </li>
-        <li>
-          <Link to="/spin">
-            <img src={SpinIcon} alt="Spin" />
-            Spin
-          </Link>
-        </li>
+     
       </ul>
     </nav>
   );

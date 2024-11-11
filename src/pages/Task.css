@@ -1,94 +1,163 @@
-/* Task.css */
-.body2 {
-  background: linear-gradient(180deg, #0D359D 0%, #010A20 50.34%);
-  min-height: 100vh;
+/* Body Background */
+body {
+  background: linear-gradient(to right, #d7e9f7, #b0d4f1); /* Soft blue gradient background */
+  font-family: Arial, sans-serif;
 }
 
+
+/* Container Styling */
 .task-container {
- 
-  
+  max-width: 600px;
+  margin: 40px auto;
   padding: 20px;
-  font-family: 'Arial', sans-serif;
- 
- 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .task-container h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
   color: #333;
-  text-align: center;
+  margin-bottom: 25px;
 }
 
-.task-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-p {
+/* Tabs */
+.tabs {
   display: flex;
-  text-align: center;
-  color: #4e89c7;
-  font-weight: 100;
-  font-size: 20px;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-.task-list li {
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  margin-bottom: 10px;
-  border: 1px solid #5f2dc1;
-  border-radius: 30px;
-  background: #6071be;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-.task-list li:hover {
-  background: #29187a;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.task-list li span {
-  flex: 1;
-  font-size: 1rem;
-  color: #555;
-}
-
-.task-list li button {
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  color: #fff;
-  background-color: #007bff;
+.tabs button {
+  padding: 10px 20px;
   border: none;
-  border-radius: 40px;
+  border-radius: 8px;
+  background-color: #f0f0f5;
+  color: #555;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.task-list li button:hover {
+.tabs button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.tabs button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Task List and Items */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-item {
+  background-color: #f0f9ff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Task Descriptions */
+.task-item span {
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+}
+
+.task-item p {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+}
+
+/* Buttons */
+.task-item button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.task-item button:hover {
   background-color: #0056b3;
 }
 
-.task-list li.completed {
-  border-color: #28a745;
+.task-item button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-.task-list li.completed span {
+/* Status Text */
+.task-item span {
+  font-size: 14px;
+  font-weight: bold;
   color: #28a745;
 }
 
-.task-list li.verifying {
-  border-color: #ffc107;
-}
-
-.task-list li.verifying span {
+.task-item .verifying {
   color: #ffc107;
 }
-.task-details {
-  font-size: 0.9rem;
-  color: #666; /* Gray color to differentiate from the main task description */
-  margin-top: 5px;
+
+.task-item .completed {
+  color: #28a745;
+}
+
+/* Input Field for Code Verification */
+.task-item input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.task-item input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.task-item .code-submit-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.task-item .code-submit-btn:hover {
+  background-color: #218838;
+}
+
+/* Loading State */
+.loading-text {
+  font-size: 16px;
+  color: #007bff;
+  font-weight: bold;
+  margin: 20px;
 }
